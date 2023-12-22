@@ -4,13 +4,17 @@
 const ctx = document.getElementById('myChart');
 
 new Chart(ctx, {
-  type: 'radar',
+  type: 'bar',
   data: {
-    labels: ['SHO', 'PAS', 'PHY', 'DEF', 'DRI', 'PAC'],
+    labels: ['Possession Game', 'Quick Counter', 'Long Ball Counter', 'Out Wide', 'Long Ball'],
     datasets: [{
-      label: 'Poin',
-      data: [99, 97, 88, 41, 97, 97],
-      borderWidth: 3
+      label: '2022',
+      data: [60, 45, 88, 55, 74, 72],
+      borderWidth: 1
+    }, {
+      label: '2023',
+      data: [70, 35, 58, 85, 34, 52],
+      borderWidth: 1
     }]
   },
   options: {
@@ -19,19 +23,15 @@ new Chart(ctx, {
           labels: {
                // This more specific font property overrides the global property
               font: {
-                  size: 20
+                  size: 18
               }
           },
 
       },
     },
     scales: {
-      r: {
-          pointLabels: {
-              font: {
-                  size: 20
-              }
-          }
+      y: {
+        beginAtZero: true
       }
     }
   }
