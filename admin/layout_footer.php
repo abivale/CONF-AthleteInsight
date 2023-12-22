@@ -1,5 +1,5 @@
 <!-- /.container-fluid -->
-<footer class="footer text-center"> <?php echo date("Y"); ?> Raicabkabbdg. Hak Cipta Dilindungi. &copy; </footer>
+
         </div>
         <!-- ============================================================== -->
         <!-- End Page Content -->

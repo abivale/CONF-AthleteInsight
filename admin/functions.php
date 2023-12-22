@@ -36,6 +36,18 @@ function bisa($conn, $query)
 }
 
 
+// Fungsi untuk mencari data berdasarkan kata kunci
+function cariData($data, $keyword)
+{
+    $hasil = [];
+    foreach ($data as $row) {
+        if (stripos($row['nama'], $keyword) !== false || stripos($row['nama_club'], $keyword) !== false) {
+            $hasil[] = $row;
+        }
+    }
+    return $hasil;
+}
+
 
 function ambilsatubaris($conn, $query)
 {

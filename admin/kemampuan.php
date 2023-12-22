@@ -20,6 +20,7 @@ $data = ambildata($conn, $query);
     <!-- /.row -->
     <!-- ============================================================== -->
     <!-- Different data widgets -->
+    <a href="./detail_kemampuan.php">Pindah</a>
     <!-- ============================================================== -->
     <!-- .row -->
     <div class="row">

@@ -206,3 +206,22 @@ footer {
 }
 
 
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+  
+.flex-container > div {
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+  
+.img-soccer {
+    max-width: 50%;
+    height: auto;
+    margin: 0 5%;
+}
