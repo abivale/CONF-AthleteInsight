@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <header style="background-image: url('<?php echo $background_image_url; ?>');">
+    <?php
+        // Ganti path gambar splash sesuai dengan kebutuhan Anda
+        $background_image_url = 'splash-image.png';
+    ?>
+
+    <header style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('<?php echo $background_image_url; ?>');">
         <div class="navbar">
             <div class="menu-icon" id="menu-icon">
                 <div class="bar"></div>
@@ -31,6 +36,7 @@
     <div class="container">
         <!-- Konten Pendaftaran di sini -->
         <div class="registration-section">
+            <!-- Isi konten pendaftaran -->
         </div>
     </div>
 
@@ -49,12 +55,14 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
+                <!-- Isi bagian about -->
             </div>
             <div class="footer-section contact">
+                <!-- Isi bagian contact -->
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; <?php echo date("Y"); ?> Raicabkabbdg. Hak Cipta Dilindungi.
+            &copy; <?php echo date("Y"); ?> CONF . Hak Cipta Dilindungi.
         </div>
     </footer>
 </body>
