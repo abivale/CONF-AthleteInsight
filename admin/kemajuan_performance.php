@@ -5,6 +5,8 @@ require 'layout_header.php';
 $query = 'SELECT * FROM update_performance';
 $data = ambildata($conn, $query);
 ?>
+<link rel="stylesheet" href="../style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <div class="container-fluid">
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -20,6 +22,9 @@ $data = ambildata($conn, $query);
     <!-- /.row -->
     <!-- ============================================================== -->
     <!-- Different data widgets -->
+    <canvas id="myChart"></canvas>
+
+    <script src="../assets/chart/barChart.js"></script>
     <!-- ============================================================== -->
     <!-- .row -->
     <div class="row">
