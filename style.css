@@ -160,6 +160,11 @@ footer {
     font-family: 'Helvetica', Arial, sans-serif;
 }
 
+.footer {
+    position: absolute;
+    bottom: auto;
+}
+
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -212,7 +217,7 @@ footer {
     justify-content: center;
     align-self: center;
 }
-  
+
 .flex-container > div {
     margin: 10px;
     text-align: center;
@@ -225,3 +230,26 @@ footer {
     height: auto;
     margin: 0 5%;
 }
+
+/* punya qisti */
+.card {
+    background-color: #21539E;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+ 
+  img{
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+  }
