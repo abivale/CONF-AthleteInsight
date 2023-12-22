@@ -71,9 +71,9 @@ mysqli_close($conn);
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<div class="login100-form-title" style="background-image: url(assets/login/images/pramuka.png);">
+				<div class="login100-form-title" style="background-image: url(assets/login/images/lapangan.jpg);">
 					<span class="login100-form-title-1">
-						Aplikasi Pendaftaran Pramuka
+						Athlete Insight
 					</span>
 				</div>
 
