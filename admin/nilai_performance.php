@@ -1,5 +1,5 @@
 <?php
-$title = 'dashboard';
+$title = 'nilaiperformance';
 require 'functions.php';
 require 'layout_header.php';
 $query = 'SELECT * FROM nilai_performance';
@@ -8,11 +8,11 @@ $data = ambildata($conn, $query);
 <div class="container-fluid">
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Performance</h4>
+            <h4 class="page-title">Nilai Performance Atlit</h4>
         </div>
         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
             <ol class="breadcrumb">
-                <li><a href="#">nilai</a></li>
+                <li><a href="#">nilai performance</a></li>
             </ol>
         </div>
         <!-- /.col-lg-12 -->
