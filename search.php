@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Landing Page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
     <header>
         <div class="navbar">
@@ -28,7 +30,7 @@
     </header>
     <div class="container" style="background-image: url('pramuka.png');">
         <section id="content">
-        <?php
+            <?php
             if (isset($_GET['query'])) {
                 $search_query = $_GET['query'];
 
@@ -60,11 +62,11 @@
         });
     </script>
 
-     <!-- Footer -->
-     <footer>
+    <!-- Footer -->
+    <footer>
         <div class="footer-content">
             <div class="footer-section about">
-            <h1>Tentang</h1>
+                <h1>Tentang</h1>
                 <p>Tujuan Raimuna adalah membina dan mengembangkan persaudaraan dan persatuan di kalangan para Pramuka Penegak dan Pramuka Pandega serta memberikan kepada mereka kegiatan kreatif, rekreatif dan produktif yang bersifat edukatif.</p>
             </div>
             <div class="footer-section links">
@@ -87,4 +89,5 @@
         </div>
     </footer>
 </body>
+
 </html>
