@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 20, 2023 at 02:48 PM
+-- Generation Time: Dec 25, 2023 at 03:38 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.25
 
@@ -30,10 +30,17 @@ SET time_zone = "+00:00";
 CREATE TABLE `afiliasi` (
   `id_afiliasi` int(11) NOT NULL,
   `id_atlit` int(11) NOT NULL,
-  `nama_club` int(25) NOT NULL,
+  `nama_club` varchar(25) NOT NULL,
   `tahun_gabung` int(11) NOT NULL,
   `tahun_keluar` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `afiliasi`
+--
+
+INSERT INTO `afiliasi` (`id_afiliasi`, `id_atlit`, `nama_club`, `tahun_gabung`, `tahun_keluar`) VALUES
+(1, 1, 'Real Madrid', 2009, 2018);
 
 -- --------------------------------------------------------
 
@@ -50,6 +57,13 @@ CREATE TABLE `atlit` (
   `nilai_posisi` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `atlit`
+--
+
+INSERT INTO `atlit` (`id_atlit`, `nama`, `gambar`, `bendera`, `posisi`, `nilai_posisi`) VALUES
+(1, 'cristiano Ronaldo', '', '', 'Forward', 97);
+
 -- --------------------------------------------------------
 
 --
@@ -58,9 +72,9 @@ CREATE TABLE `atlit` (
 
 CREATE TABLE `kesehatan` (
   `id_kesehatan` int(11) NOT NULL,
+  `id_atlit` int(11) NOT NULL,
   `fisik` varchar(25) NOT NULL,
-  `mental` varchar(25) NOT NULL,
-  `id_atlit` int(11) NOT NULL
+  `mental` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -71,13 +85,13 @@ CREATE TABLE `kesehatan` (
 
 CREATE TABLE `nilai_kemampuan` (
   `id_kemampuan` int(11) NOT NULL,
+  `id_atlit` int(11) NOT NULL,
   `nilai_sho` int(2) NOT NULL,
   `nilai_pac` int(2) NOT NULL,
   `nilai_pas` int(2) NOT NULL,
   `nilai_dri` int(2) NOT NULL,
   `nilai_phy` int(2) NOT NULL,
-  `nilai_def` int(2) NOT NULL,
-  `id_atlit` int(11) NOT NULL
+  `nilai_def` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -88,11 +102,11 @@ CREATE TABLE `nilai_kemampuan` (
 
 CREATE TABLE `nilai_performance` (
   `id_nilaiPerformance` int(11) NOT NULL,
+  `id_atlit` int(11) NOT NULL,
   `stamina` int(11) NOT NULL,
   `power` int(11) NOT NULL,
   `speed` int(11) NOT NULL,
-  `rating` varchar(25) NOT NULL,
-  `id_atlit` int(11) NOT NULL
+  `rating` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -130,9 +144,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `nama_user`, `username`, `password`, `outlet_id`, `role`) VALUES
 (19, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', NULL, 'admin'),
-(39, 'komarr', 'user', 'ee11cbb19052e40b07aac0ca060c23ee', NULL, 'owner'),
-(42, 'Blin', 'blin', '5c4b5beceae516409e9e50996b317fa5', NULL, 'owner'),
-(43, 'ulum', 'ulum2', 'cf05d2c518dec69624425f6794d22fea', NULL, 'owner');
+(52, 'arul', 'arul', 'be3025c4341e340ee641e89779ca2649', NULL, 'owner'),
+(53, 'arul', 'ulum', 'be3025c4341e340ee641e89779ca2649', NULL, 'owner');
 
 --
 -- Indexes for dumped tables
@@ -200,7 +213,7 @@ ALTER TABLE `afiliasi`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- Constraints for dumped tables

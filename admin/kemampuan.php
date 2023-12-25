@@ -2,7 +2,7 @@
 $title = 'kemampuan';
 require 'functions.php';
 require 'layout_header.php';
-$query = 'SELECT * FROM nilai_kemampuan';
+$query = 'SELECT * FROM atlit';
 $data = ambildata($conn, $query);
 ?>
 <link rel="stylesheet" href="../style.css">
@@ -23,83 +23,19 @@ $data = ambildata($conn, $query);
     <!-- Different data widgets -->
     
 <div class="grid-container">
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div>
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
-    <div class="grid-item">
-        <img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" >
-    </div>
+    <!-- <div>
+        <a href="../admin/detail_kemampuan.php"><img src="../assets/img/Haaland.png" alt="Avatar" style="width:100%" ></a>
+    </div> -->
+    <?php 
+        foreach ($data as $card) : ?>
+        <div>
+            <a href="../admin/detail_kemampuan.php?id=<?= $card['id_atlit'] ?>"><img src="../assets/img/<?= $card['card'] ?>.png" style="width:100%"></img></a>
+        </div>
+        <?php endforeach;
+    ?>
 </div>
 
-
-
-
-
-
-
-    <!-- <div class="card">
-        <img src="https://thumb.viva.co.id/media/frontend/thumbs3/2023/11/01/6541e20473772-cristiano-ronaldo-meminta-suporter-lawan-tutup-mulut_1265_711.jpg" alt="Avatar" style="width:100%">
-        <div class="container2">
-            <h4><b>John Doe</b></h4> 
-            <p>Architect & Engineer</p> 
-        </div>
-    </div> -->
-
-    <a href="./detail_kemampuan.php">Pindah</a>
+    <!-- <a href="./detail_kemampuan.php">Pindah</a> -->
     <!-- ============================================================== -->
     <!-- .row -->
     <div class="row">

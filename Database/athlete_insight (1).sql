@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2023 at 03:38 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.0.25
+-- Generation Time: Dec 25, 2023 at 07:27 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -52,6 +52,7 @@ CREATE TABLE `atlit` (
   `id_atlit` int(11) NOT NULL,
   `nama` varchar(25) NOT NULL,
   `gambar` varchar(25) NOT NULL,
+  `card` varchar(25) NOT NULL,
   `bendera` varchar(25) NOT NULL,
   `posisi` varchar(25) NOT NULL,
   `nilai_posisi` int(11) NOT NULL
@@ -61,8 +62,17 @@ CREATE TABLE `atlit` (
 -- Dumping data for table `atlit`
 --
 
-INSERT INTO `atlit` (`id_atlit`, `nama`, `gambar`, `bendera`, `posisi`, `nilai_posisi`) VALUES
-(1, 'cristiano Ronaldo', '', '', 'Forward', 97);
+INSERT INTO `atlit` (`id_atlit`, `nama`, `gambar`, `card`, `bendera`, `posisi`, `nilai_posisi`) VALUES
+(1, 'cristiano Ronaldo', 'Ronaldo', 'CRonaldo', '', 'Forward', 97),
+(2, 'Erling Haaland', 'Haaland', 'CHaaland', 'Norwegia', 'ST', 88),
+(3, 'Messi', 'Messi', 'CMessi', '', 'CF', 92),
+(4, 'Navas', 'Navas', 'CNavas', '', 'GK', 85),
+(5, 'Neymar Jr', 'Neymar', 'CNeymar', '', 'CAM', 92),
+(6, 'Ruben Dias', 'Dias', 'CDias', '', 'CB', 90),
+(7, 'Maguire', 'Maguire', 'CMaguire', '', 'CB', 86),
+(8, 'van Dijk', 'Dijk', 'CDijk', '', 'CB', 91),
+(9, 'Muller', 'Muller', 'CMuller', '', 'CAM', 84),
+(10, 'Odegaard', 'Odegaard', 'COdegaard', '', 'CAM', 90);
 
 -- --------------------------------------------------------
 
@@ -93,6 +103,22 @@ CREATE TABLE `nilai_kemampuan` (
   `nilai_phy` int(2) NOT NULL,
   `nilai_def` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `nilai_kemampuan`
+--
+
+INSERT INTO `nilai_kemampuan` (`id_kemampuan`, `id_atlit`, `nilai_sho`, `nilai_pac`, `nilai_pas`, `nilai_dri`, `nilai_phy`, `nilai_def`) VALUES
+(1, 1, 93, 87, 80, 89, 78, 39),
+(2, 2, 91, 89, 65, 80, 97, 49),
+(3, 3, 88, 82, 91, 95, 68, 35),
+(4, 4, 80, 84, 75, 87, 84, 54),
+(5, 5, 87, 89, 89, 96, 66, 41),
+(6, 6, 40, 65, 68, 70, 88, 90),
+(7, 7, 64, 82, 74, 80, 88, 86),
+(8, 8, 63, 80, 75, 75, 88, 91),
+(9, 9, 82, 59, 93, 79, 69, 55),
+(10, 10, 86, 80, 92, 91, 70, 67);
 
 -- --------------------------------------------------------
 
@@ -208,6 +234,12 @@ ALTER TABLE `user`
 --
 ALTER TABLE `afiliasi`
   MODIFY `id_afiliasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `nilai_kemampuan`
+--
+ALTER TABLE `nilai_kemampuan`
+  MODIFY `id_kemampuan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `user`
