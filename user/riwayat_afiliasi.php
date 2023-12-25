@@ -18,7 +18,6 @@ $data = ambildata($conn, $query);
                 <li><a href="#">Pendaftar</a></li>
             </ol>
         </div>
-        <!-- /.col-lg-12 -->
     </div>
     <div class="row">
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -32,7 +31,8 @@ $data = ambildata($conn, $query);
                             <tr>
                                 <th>ID</th>
                                 <th>Nama Atlet</th>
-                                <th>Nama Klub</th>
+                                <th>Nama Club</th>
+                                <th>Club</th>
                                 <th>Tahun Bergabung</th>
                                 <th>Tahun Keluar</th>
                             </tr>
@@ -44,6 +44,7 @@ $data = ambildata($conn, $query);
                                         <td><?= $row['id_afiliasi'] ?></td>
                                         <td><?= $row['nama'] ?></td>
                                         <td><?= $row['nama_club'] ?></td>
+                                        <td><?= $row['club'] ?></td>
                                         <td><?= $row['tahun_gabung'] ?></td>
                                         <td><?= $row['tahun_keluar'] ?></td>
                                     </tr>

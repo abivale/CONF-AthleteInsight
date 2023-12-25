@@ -18,7 +18,6 @@ $data = ambildata($conn, $query);
                 <li><a href="#">Pendaftar</a></li>
             </ol>
         </div>
-        <!-- /.col-lg-12 -->
     </div>
     <div class="row">
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -32,7 +31,8 @@ $data = ambildata($conn, $query);
                             <tr>
                                 <th>ID</th>
                                 <th>Nama Atlet</th>
-                                <th>Nama Klub</th>
+                                <th>Nama Club</th>
+                                <th>Club</th>
                                 <th>Tahun Bergabung</th>
                                 <th>Tahun Keluar</th>
                             </tr>
@@ -44,9 +44,32 @@ $data = ambildata($conn, $query);
                                         <td><?= $row['id_afiliasi'] ?></td>
                                         <td><?= $row['nama'] ?></td>
                                         <td><?= $row['nama_club'] ?></td>
+                                        <td class="text-center">
+                                            <a href="#" data-toggle="modal" data-target="#modalFoto<?= $row['id_afiliasi']; ?>" title="Lihat Foto" class="btn btn-info"><i class="fa fa-image"></i></a>
+                                        </td>
                                         <td><?= $row['tahun_gabung'] ?></td>
                                         <td><?= $row['tahun_keluar'] ?></td>
                                     </tr>
+
+                                    <!-- Modal untuk menampilkan gambar foto -->
+                                    <div class="modal fade" id="modalFoto<?= $row['id_afiliasi']; ?>" tabindex="-1" role="dialog" aria-labelledby="modalLabelFoto<?= $row['id_afiliasi']; ?>">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title" id="modalLabelFoto<?= $row['id_afiliasi']; ?>">Foto <?= $row['nama_club']; ?></h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body text-center">
+                                                    <img src="<?= './../assets/img/' . $row['club'] ?>" width="500" height="500" style="margin-top: 10px;">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                             <?php endforeach;
                             }
                             ?>
