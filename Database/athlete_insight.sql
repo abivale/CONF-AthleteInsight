@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Dec 25, 2023 at 03:38 PM
+=======
+-- Generation Time: Dec 25, 2023 at 04:22 PM
+>>>>>>> 0a74bfa4206bdf857d429598a99076743e303463
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.25
 
@@ -31,6 +35,10 @@ CREATE TABLE `afiliasi` (
   `id_afiliasi` int(11) NOT NULL,
   `id_atlit` int(11) NOT NULL,
   `nama_club` varchar(25) NOT NULL,
+<<<<<<< HEAD
+=======
+  `club` varchar(256) NOT NULL,
+>>>>>>> 0a74bfa4206bdf857d429598a99076743e303463
   `tahun_gabung` int(11) NOT NULL,
   `tahun_keluar` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -39,8 +47,13 @@ CREATE TABLE `afiliasi` (
 -- Dumping data for table `afiliasi`
 --
 
+<<<<<<< HEAD
 INSERT INTO `afiliasi` (`id_afiliasi`, `id_atlit`, `nama_club`, `tahun_gabung`, `tahun_keluar`) VALUES
 (1, 1, 'Real Madrid', 2009, 2018);
+=======
+INSERT INTO `afiliasi` (`id_afiliasi`, `id_atlit`, `nama_club`, `club`, `tahun_gabung`, `tahun_keluar`) VALUES
+(1, 1, 'Real Madrid', '65096a628a5f4.png', 2009, 2018);
+>>>>>>> 0a74bfa4206bdf857d429598a99076743e303463
 
 -- --------------------------------------------------------
 
