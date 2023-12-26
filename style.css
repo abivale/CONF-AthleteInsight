@@ -104,6 +104,14 @@ header {
     .nav-links li {
         margin: 10px 0;
     }
+
+    .flex-container {
+        margin: 0;
+    }
+
+    .flex-item-right, .flex-item-left {
+        flex: 100%;
+    }
 }
 
 /* Style untuk kontainer */
@@ -160,6 +168,11 @@ footer {
     font-family: 'Helvetica', Arial, sans-serif;
 }
 
+.footer {
+    position: absolute;
+    bottom: auto;
+}
+
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -205,23 +218,44 @@ footer {
     font-family: 'Times New Roman', serif;
 }
 
-
+/* punya rizal */
 .flex-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     align-self: center;
-}
-  
-.flex-container > div {
-    margin: 10px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
-}
-  
-.img-soccer {
-    max-width: 50%;
-    height: auto;
+
     margin: 0 5%;
 }
+  
+.flex-left {
+    flex: 50%;
+}
+
+.flex-right {
+    flex: 50%;
+}
+
+/* punya qisti */
+.card {
+    background-color: #21539E;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+ 
+  img{
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+  }
