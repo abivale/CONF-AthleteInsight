@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2023 at 07:27 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Dec 26, 2023 at 02:57 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,7 +33,7 @@ CREATE TABLE `afiliasi` (
   `nama_club` varchar(25) NOT NULL,
   `tahun_gabung` int(11) NOT NULL,
   `tahun_keluar` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `afiliasi`
@@ -56,7 +56,7 @@ CREATE TABLE `atlit` (
   `bendera` varchar(25) NOT NULL,
   `posisi` varchar(25) NOT NULL,
   `nilai_posisi` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `atlit`
@@ -85,7 +85,7 @@ CREATE TABLE `kesehatan` (
   `id_atlit` int(11) NOT NULL,
   `fisik` varchar(25) NOT NULL,
   `mental` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -102,7 +102,7 @@ CREATE TABLE `nilai_kemampuan` (
   `nilai_dri` int(2) NOT NULL,
   `nilai_phy` int(2) NOT NULL,
   `nilai_def` int(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `nilai_kemampuan`
@@ -133,7 +133,18 @@ CREATE TABLE `nilai_performance` (
   `power` int(11) NOT NULL,
   `speed` int(11) NOT NULL,
   `rating` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `nilai_performance`
+--
+
+INSERT INTO `nilai_performance` (`id_nilaiPerformance`, `id_atlit`, `stamina`, `power`, `speed`, `rating`) VALUES
+(0, 1, 91, 90, 87, 'A'),
+(1, 2, 89, 87, 90, 'A'),
+(2, 7, 80, 78, 79, 'B'),
+(3, 9, 80, 85, 90, 'A'),
+(4, 6, 75, 78, 70, 'C');
 
 -- --------------------------------------------------------
 
@@ -147,7 +158,7 @@ CREATE TABLE `update_performance` (
   `power` int(11) NOT NULL,
   `stamina` int(11) NOT NULL,
   `speed` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -162,7 +173,7 @@ CREATE TABLE `user` (
   `password` varchar(150) DEFAULT NULL,
   `outlet_id` int(11) DEFAULT NULL,
   `role` enum('admin','owner') DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user`
