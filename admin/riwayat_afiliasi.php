@@ -11,7 +11,7 @@ $data = ambildata($conn, $query);
 <div class="container-fluid">
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Riwayat afiliasi</h4>
+            <h4 class="page-title">Data Master Pendaftar</h4>
         </div>
         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
             <ol class="breadcrumb">
@@ -62,7 +62,7 @@ $data = ambildata($conn, $query);
                                                     </button>
                                                 </div>
                                                 <div class="modal-body text-center">
-                                                    <img src="<?= './../assets/img/' . $row['nama_club'] ?>" width="500" height="500" style="margin-top: 10px;">
+                                                    <img src="<?= './../assets/img/' . $row['club'] ?>" width="500" height="500" style="margin-top: 10px;">
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
