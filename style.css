@@ -237,6 +237,17 @@ footer {
     flex: 50%;
 }
 
+.flex-left2 {
+    flex: 33%;
+}
+
+.flex-center {
+    flex: 33%;
+}
+.flex-right2 {
+    flex: 33%;
+}
+
 /* punya qisti */
 .card {
     background-color: #21539E;
