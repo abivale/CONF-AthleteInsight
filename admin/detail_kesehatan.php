@@ -12,9 +12,6 @@ $sql = "SELECT atlit.card, kesehatan_fisik.*, kesehatan_mental.*
         WHERE atlit.id_atlit = $id
         LIMIT 1";
 
-// $sql = "SELECT atlit.card, kesehatan_mental.* FROM atlit
-//         INNER JOIN kesehatan_mental ON atlit.id_atlit = kesehatan_mental.id_atlit
-//         WHERE kesehatan_mental.id_atlit = $id LIMIT 1";  
 
 $result = $conn->query($sql);
 
@@ -32,11 +29,13 @@ if ($result->num_rows > 0) {
     $NT = $row['NT'];
 
     $CH = $row['CH'];
+
     $MV = $row['MV']; 
     $CC = $row['CC'];
     $EM = $row['EM'];
     $WT = $row['WT'];
     $PA = $row['PA'];
+
 } else {
     echo "Tidak ada data yang ditemukan.";
 }
@@ -65,22 +64,26 @@ if ($result->num_rows > 0) {
     <!-- <div>
         <div>
         <img src="../assets/img/<?= $card ?>.png" style="width:100%"></img>
+
             <p>CH: <?= $CH ?></p>
             <p>MV: <?= $MV ?></p>
             <p>CC: <?= $CC ?></p>
             <p>EM: <?= $EM ?></p>
             <p>WT: <?= $WT ?></p>
             <p>PA: <?= $PA ?></p>
+
         </div>
     </div> -->
 
     
     <div class="flex-container">
+
         <div class="flex-left2">
             <canvas id="myChart"></canvas>
         </div>
         <img class="flex-center" src="../assets/img/<?= $card ?>.png"></img>
         <div class="flex-right2">
+
             <canvas id="myChart2"></canvas>
         </div>
     </div>
