@@ -56,12 +56,12 @@ $data = ambildata($conn, $query);
                             <?php $no=1; foreach($data as $row): ?>
                                 <tr>
                                     <td><?= $no++ ?></td>
-                                    <td>Nama Athlit</td>
-                                    <td>Details</td>
-                                    <td>Details</td>
-                                    <td>Details</td>
-                                    <td>Details</td>
-                                    <td>Details</td>
+                                    <td><?= $row['nama'] ?></td>
+                                    <td><a href="../admin/detail_kemampuan.php?id=<?= $row['id_atlit'] ?>">Details</a></td>
+                                    <td><a href="../admin/nilai_performance.php">Details</a></td>
+                                    <td><a href="../admin/detail_kemajuan.php?id=<?= $row['id_atlit'] ?>">Details</a></td>
+                                    <td><a href="../admin/detail_kesehatan.php?id=<?= $row['id_atlit'] ?>">Details</a></td>
+                                    <td><a href="../admin/riwayat_afiliasi.php">Details</a></td>
                                     <!-- Contoh buat aksi tapi urgteu bisa nyambungken ka data na -->
                                      <!-- <td align="center">  -->
                                           <!-- <a href="detail.php?id=<?= htmlspecialchars($row['atlit']); ?>" data-toggle="tooltip" data-placement="bottom" title="Edit" class="btn btn-success btn-block">Detail</a> -->
