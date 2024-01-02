@@ -2,7 +2,7 @@
 $title = 'kemajuanperformance';
 require 'functions.php';
 require 'layout_header.php';
-$query = 'SELECT * FROM update_performance';
+$query = 'SELECT * FROM atlit';
 $data = ambildata($conn, $query);
 ?>
 <link rel="stylesheet" href="../style.css">
@@ -22,9 +22,19 @@ $data = ambildata($conn, $query);
     <!-- /.row -->
     <!-- ============================================================== -->
     <!-- Different data widgets -->
-    <canvas id="myChart"></canvas>
+    <div class="grid-container">
+    <?php 
+        foreach ($data as $card) : ?>
+        <div>
+            <a href="../admin/detail_kemajuan.php?id=<?= $card['id_atlit'] ?>"><img src="../assets/img/<?= $card['card'] ?>.png" style="width:100%"></img></a>
+        </div>
+        <?php endforeach;
+    ?>
+    </div>
 
-    <script src="../assets/chart/barChart.js"></script>
+    <!-- <canvas id="myChart"></canvas>
+
+    <script src="../assets/chart/barChart.js"></script> -->
     <!-- ============================================================== -->
     <!-- .row -->
     <div class="row">
