@@ -5,6 +5,7 @@ require 'layout_header.php';
 $query = 'SELECT afiliasi.*, atlit.nama FROM afiliasi INNER JOIN atlit ON afiliasi.id_atlit = atlit.id_atlit';
 $data = ambildata($conn, $query);
 
+
 ?>
 
 <!-- HTML menampilkan data -->

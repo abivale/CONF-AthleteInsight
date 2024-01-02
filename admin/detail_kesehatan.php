@@ -12,6 +12,7 @@ $sql = "SELECT atlit.card, kesehatan_fisik.*, kesehatan_mental.*
         WHERE atlit.id_atlit = $id
         LIMIT 1";
 
+
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -28,7 +29,8 @@ if ($result->num_rows > 0) {
     $NT = $row['NT'];
 
     $CH = $row['CH'];
-    $MV = $row['MV'];
+
+    $MV = $row['MV']; 
     $CC = $row['CC'];
     $EM = $row['EM'];
     $WT = $row['WT'];
@@ -62,22 +64,26 @@ if ($result->num_rows > 0) {
     <!-- <div>
         <div>
         <img src="../assets/img/<?= $card ?>.png" style="width:100%"></img>
-            <p>sho: <?= $nilai_sho ?></p>
-            <p>pac: <?= $nilai_pac ?></p>
-            <p>pas: <?= $nilai_pas ?></p>
-            <p>dri: <?= $nilai_dri ?></p>
-            <p>phy: <?= $nilai_phy ?></p>
-            <p>def: <?= $nilai_def ?></p>
+
+            <p>CH: <?= $CH ?></p>
+            <p>MV: <?= $MV ?></p>
+            <p>CC: <?= $CC ?></p>
+            <p>EM: <?= $EM ?></p>
+            <p>WT: <?= $WT ?></p>
+            <p>PA: <?= $PA ?></p>
+
         </div>
     </div> -->
 
     
     <div class="flex-container">
-        <div class="flex-right2">
+
+        <div class="flex-left2">
             <canvas id="myChart"></canvas>
         </div>
         <img class="flex-center" src="../assets/img/<?= $card ?>.png"></img>
-        <div class="flex-left2">
+        <div class="flex-right2">
+
             <canvas id="myChart2"></canvas>
         </div>
     </div>
@@ -156,6 +162,7 @@ if ($result->num_rows > 0) {
         }
         });
     </script>
+
     
 
     <!-- ============================================================== -->
